@@ -18,9 +18,8 @@ public class Downloader {
 	}
 	
 	public static String downloadText(String URL) {
-		BufferedReader reader;
 		try {
-			reader = new BufferedReader(new InputStreamReader(openHttpConnection(URL), "UTF-8"));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(openHttpConnection(URL), "UTF-8"));
 			String str = "", s;
 			while((s = reader.readLine()) != null) str += s + "\n";
 			reader.close();
